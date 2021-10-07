@@ -1,0 +1,24 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #303d4f;
+}
+
+.navbar-container {
+	width: 100%;
+	padding: 0;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	background-color: #353943;
+	border: 0.5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+.media {
+	height: 50px;
+	vertical-align: middle;
+}
