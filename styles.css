@@ -8,6 +8,10 @@ body {
 	background-color: #303d4f;
 }
 
+.main-container {
+	display: flex;
+}
+
 .navbar-container {
 	width: 100%;
 	padding: 0;
@@ -18,7 +22,45 @@ body {
 	border: 0.5px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
+
+.navbar-image-container {
+	display: flex;
+	background-color: red;
+	margin-left: 5%;
+}
+
 .media {
-	height: 50px;
+	height: 70px;
 	vertical-align: middle;
+}
+
+a:link,
+a:visited,
+a:active {
+	color: white;
+	text-decoration: none;
+}
+
+.navbar-menu-container {
+	display: flex;
+	width: 100%;
+	background-color: pink;
+	margin-left: 5%;
+}
+
+.navbar-menu-container > nav > ul {
+	display: flex;
+	list-style: none;
+}
+
+.navbar-menu-container > nav > ul > li {
+	margin-top: 10%;
+	margin-left: 20%;
+}
+
+@media (max-width: 450px) {
+	.navbar-menu-container > nav > ul > li {
+		margin-top: 10%;
+		margin-left: 8px;
+	}
 }
