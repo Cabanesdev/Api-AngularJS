@@ -4,6 +4,5 @@ app.controller('myCtrl', ($scope, $http) => {
 		.get('https://kitsu.io/api/edge/anime?filter[text]=sao')
 		.then((response) => {
 			let data = response.data.data;
-			console.log(data);
 		});
 });
