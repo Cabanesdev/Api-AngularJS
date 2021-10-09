@@ -10,6 +10,7 @@ body {
 
 .main-container {
 	display: flex;
+	flex-direction: column;
 }
 
 .header-container {
@@ -34,4 +35,23 @@ a:visited,
 a:active {
 	color: white;
 	text-decoration: none;
+}
+
+.input-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.input-container input {
+	width: 700px;
+	padding: 10px;
+	font-size: 20px;
+	max-width: 80%;
+	background: #273242;
+	color: #a8a8a8;
+	border: 0;
+	outline: 0;
+	border-radius: 4px;
 }
