@@ -6,10 +6,6 @@
 		<title>AnimeDev</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 		<script src="app.js"></script>
-		<script
-			src="https://kit.fontawesome.com/d58d9c3d71.js"
-			crossorigin="anonymous"
-		></script>
 		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
@@ -19,7 +15,18 @@
 				<h1>AnimeDev</h1>
 			</div>
 			<div class="input-container">
-				<input type="text" placeholder="¿Que buscas?" />
+				<input
+					type="text"
+					ng-model="test"
+					ng-change="getAnimes()"
+					placeholder="¿Que buscas?"
+				/>
+			</div>
+			<div class="animes-container">
+				<div class="card-container" ng-repeat="i in animes">
+					<img src="{{ i.attributes.posterImage.tiny }}" alt="imagen Anime" />
+					<h3>{{ i.attributes.titles.en_jp }}</h3>
+				</div>
 			</div>
 		</div>
 	</body>

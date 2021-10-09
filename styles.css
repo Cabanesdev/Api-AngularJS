@@ -55,3 +55,41 @@ a:active {
 	outline: 0;
 	border-radius: 4px;
 }
+
+.animes-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-gap: 1rem;
+}
+
+.card-container {
+	padding: 2%;
+	background-color: red;
+}
+
+.card-container img {
+	display: block;
+	margin: 0 auto;
+}
+
+.card-container h3 {
+	text-align: center;
+}
+@media (max-width: 600px) {
+	.animes-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media (min-width: 600px) {
+	.animes-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 900px) {
+	.animes-container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
