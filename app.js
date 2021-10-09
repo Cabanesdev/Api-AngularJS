@@ -14,7 +14,13 @@ app.controller('myCtrl', ($scope, $http) => {
 
 	$scope.prueba();
 
-	$scope.getAnimes = () => {
-		console.log('hola');
+	$scope.getAnimes = (input) => {
+		$scope.input = input.toLowerCase();
+		$http
+			.get(`https://kitsu.io/api/edge/anime?filter[text]=${input}`)
+			.then((response) => {
+				let data = response.data.data;
+				$scope.animes = data;
+			});
 	};
 });
