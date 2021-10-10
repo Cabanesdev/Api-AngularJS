@@ -16,7 +16,8 @@ app.controller('myCtrl', ($scope, $http) => {
 
 	$scope.getAnimes = (input) => {
 		$scope.input = input.toLowerCase();
-		let url = 'https://kitsu.io/api/edge/anime?page[limit]=20';
+		const randomRange = Math.floor(Math.random() * 17050);
+		let url = `https://kitsu.io/api/edge/anime?page[limit]=20&page[offset]=${randomRange}`;
 		if ($scope.input)
 			url = `https://kitsu.io/api/edge/anime?filter[text]=${$scope.input}&page[limit]=20`;
 		$http.get(url).then((response) => {
