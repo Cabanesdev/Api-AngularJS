@@ -17,8 +17,8 @@ app.controller('myCtrl', ($scope, $http) => {
 	$scope.getAnimes = (input) => {
 		$scope.input = input.toLowerCase();
 		let url = 'https://kitsu.io/api/edge/anime?page[limit]=20';
-		if (!$scope.input)
-			url = `https://kitsu.io/api/edge/anime?filter[text]=${input}&page[limit]=20`;
+		if ($scope.input)
+			url = `https://kitsu.io/api/edge/anime?filter[text]=${$scope.input}&page[limit]=20`;
 		$http.get(url).then((response) => {
 			const data = response.data.data;
 			$scope.animes = data;
